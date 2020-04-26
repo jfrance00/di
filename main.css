@@ -1,0 +1,173 @@
+/* General */
+
+body {
+  margin: 0;
+  background-color: #DCDDE0;
+}
+
+h1 {
+  color: #335BD3;
+  text-align: center;
+}
+
+a {
+  color: #DCDDE0
+}
+
+
+/* NavBar */
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0;  /* Position the navbar at the top of the page */
+  width: 100%;
+  padding: inherit;
+}
+
+.navbar a {
+  float: left;
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+  float: left;
+  padding: 10px;
+}
+
+.navbar-right {
+  float: right;
+}
+
+
+/* Picture Header */
+
+.header {
+  height: 600px;
+  width: 100%;
+  background-image: url("headerback.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-direction: row;     /* stack flex items vertically */
+  justify-content: center;
+}
+
+div.htext {
+  text-align: left;
+  width: 50%;
+  padding-left: 10%;
+  padding-top: 20%;
+  align-items: flex-end;
+}
+
+/* About Me*/
+
+.aboutme-container {
+  width: 90vh;
+  /*margin: 40px auto 40px auto;*/
+  margin-left: 30%;
+  margin-right: 20%;
+  align-items: center;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: autofit;
+}
+
+.aboutme-element {
+  flex: 1;
+}
+
+
+span {
+  font-weight: bold;
+  color: #0F846F;
+}
+
+
+#prof-pic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  flex: 1;
+}
+
+
+/* Portfolio*/
+
+@media only screen and (min-width: 500px){
+  .portfolio-container{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 499px){
+  .portfolio-container{
+    width: 1fr;
+  }
+}
+
+img {
+  height: 250px;
+  width: 300px;
+}
+
+.portfolio-container{
+  align-items: center;
+}
+
+.portfolio-wrapper {
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+
+/* Blog */
+
+.blog-container{
+  align-items: center;
+}
+
+.blog-wrapper {
+  margin-left: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  grid-row-gap: 0;
+}
+
+.summary {
+  background-color: #ffffff;
+}
+
+.read-more {
+  background-color: #696969;
+}
+
+/*Contact*/
+
+.contact-wrapper {
+  display: grid;
+  text-align: center;
+}
+
+.form wrapper {
+  position: relative;
+  grid-template-columns:
+}
+
+label {
+  position: absolute;
+}
+
+.message {
+  height: 40px;
+}
