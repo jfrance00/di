@@ -59,7 +59,7 @@ section {
         border-radius:50%;
 }
 
-.threed:hover
+.threed:hover /*works in pencode, but not chrome*/
 {
         box-shadow:
                 1px 1px #53a7ea,
