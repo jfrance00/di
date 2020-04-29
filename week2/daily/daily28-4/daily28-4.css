@@ -1,0 +1,73 @@
+body > .main {
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
+
+/*orange square*/
+
+.outer {
+    display: grid;
+    grid-template-columns: repeat(12, 33px);
+    grid-template-rows: repeat(12, 33px);
+    grid-gap: 3px 3px;
+  }
+
+  .o { /*orange*/
+    background-color: orange;
+  }
+
+  .lo { /*light orange */
+    background-color: #f2b574;
+  }
+
+  .b { /*brown */
+    background-color: brown;
+  }
+
+/*Grey Grid*/
+
+.wrap {
+  display: grid;
+  grid-template-columns: repeat(12, 33px);
+  grid-template-rows: repeat(12, 33px);
+  grid-gap: 3px 3px;
+}
+
+.white {
+  background-color: #e8e9eb;
+}
+
+.grey {
+  background-color: lightgrey;
+}
+
+.silver {
+  background-color: grey;
+}
+
+.black {
+  background-color: black;
+}
+
+
+/* Picnic Pattern*/
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 33px);
+  grid-template-rows: repeat(12, 33px);
+}
+
+
+
+  .white {
+    background-color: white;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .pink {
+    background-color: pink;
+  }

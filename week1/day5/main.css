@@ -68,21 +68,20 @@ div.htext {
 /* About Me*/
 
 .aboutme-container {
-  width: 90vh;
+  width: 90%;
   /*margin: 40px auto 40px auto;*/
-  margin-left: 30%;
-  margin-right: 20%;
+  margin: 0 auto;
   align-items: center;
 }
 
-.about-me {
+.about-wrapper {
   display: grid;
-  grid-template-columns: autofit;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  width: 60%;
 }
 
-.aboutme-element {
-  flex: 1;
-}
+
 
 
 span {
