@@ -1,7 +1,12 @@
-.my-button {
-  margin: 0px;
-}
-
 .my-container {
   margin-top: 20px;
+}
+
+.my-thumbnail {
+  height: 100px;
+  width: 150px;
+}
+
+.my-sidebar {
+  background-color: #dee2e6;
 }
