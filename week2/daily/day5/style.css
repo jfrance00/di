@@ -9,4 +9,9 @@
 
 .my-sidebar {
   background-color: #dee2e6;
+  align-self: start;
+}
+
+.my-button {
+  margin-bottom: 10px;
 }
