@@ -1,6 +1,7 @@
 let numbers1 =  [0, -1, 4]     //exercise 1
 
 
+                   // exercise 2
 
 
 
@@ -24,9 +25,10 @@ function find_biggest_grade(){  //biggest grade
   for(let x in grades) {
       if (grades[x] > biggest_grade){
         biggest_grade = grades[x]; //if change to biggest_grade = x it returns David and not Ishitha (even though as is it returns 95)
+        name_best_grade = x;
       }
   }
-  return biggest_grade
+  return name_best_grade;
 
 }
 
@@ -40,9 +42,9 @@ function find_smallest_grade(){  //smallest grade
   return smallest_grade
 }
 
-function get_student_names(search_value){
-  let keys = Object.keys(grades);
-  let values = Object.values(grades);
-  let grade_index = values.findIndex(search_value);
-  let name =
-}
+//function get_student_names(search_value){
+//  let keys = Object.keys(grades);
+//  let values = Object.values(grades);
+//  let grade_index = values.findIndex(search_value);
+//  let name =
+//}

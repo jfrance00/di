@@ -20,8 +20,25 @@ for(let i = 0; i < arr_words.length; i++){
       if (single_word.indexOf(single_word[i]) !== single_word.lastIndexOf(single_word[i])){
         repeat_char++;
       }
+
     }
     if (repeat_char >= 1){
       console.log(x);
     }
+  }
+
+//___________________________________
+
+  let repeat_occurances = {}                   //get to print word with most repeated letters
+  for(let x of arr_words){
+    let single_word = x.split("");
+    let repeat_char = 0;
+    for(let i = 0; i < single_word.length; i++){
+      if (single_word.indexOf(single_word[i]) !== single_word.lastIndexOf(single_word[i])){
+        repeat_char++;
+        repeat_occurances[i] = repeat_char
+        console.log(repeat_occurances);
+      }
+    }
+    console.log(x);
   }
