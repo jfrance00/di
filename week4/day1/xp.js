@@ -1,12 +1,16 @@
-//exercise 1
+//exercise 1   make function check driver age
 var age = prompt(“What is your age?”);
 
-if (Number(age) < 18) {
-alert(“Sorry, you are too yound to drive this car. Powering off”);
-} else if (Number(age) > 18) {
-alert(“Powering On. Enjoy the ride!”);
-} else if (Number(age) === 18) {
-alert(“Congratulations on your first year of driving. Enjoy the ride!”);
+
+function checkDriverAge(age){
+    if (age < 18){
+    alert("Sorry, you are too yound to drive this car. Powering offe");
+    } else if (age > 18) {
+    alert("Powering On. Enjoy the ride!");
+    } else if (age === 18){
+    alert("Congratulations on your first year of driving. Enjoy the ride!");
+    }
+    return
 }
 
 //exercise 2
@@ -29,13 +33,3 @@ function check_basket(item){
       return false;
     }
   }
-
-function check_basket(item){
-  for(let x in amazonBasket){
-    if(x == item){
-      return true;
-    }
-    //if "return false" written here we will get false if the argument is not the first item in the object
-  }
-  return false;
-}
