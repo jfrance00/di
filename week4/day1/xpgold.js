@@ -18,24 +18,28 @@ function playTheGame(){
 function test(user_number, computerNumber){
   console.log(computerNumber);
   for(i = 0; i < 3; i++){
-    if (i < 3){
       console.log("comp num: " + computerNumber);
       console.log("user num: " + user_number);
       if (check_number(user_number, computerNumber) === true){
         alert("Congrats! You won!");
         return;
       } else if (user_number > computerNumber){
+        if (i < 2){
         alert("Your number is too big. Guess again");
         user_number = get_number();
         check_number(user_number, computerNumber);
+        } else{
+          alert("Out of guesses. The number was: " + computerNumber);
+        }
       } else if (user_number < computerNumber){
+        if (i < 2){
         alert("Your number is too small. Guess again")
         user_number = get_number();
         check_number(user_number, computerNumber);
+      } else {
+        alert("Out of guesses. The number was: " + computerNumber);
       }
-    } else {
-    alert("Good try, but needed to guess " + computerNumber);
-    }
+      }
   }
 }
 
