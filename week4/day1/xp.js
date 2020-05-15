@@ -1,10 +1,9 @@
 //exercise 1   make function check driver age
-var age = prompt(“What is your age?”);
-
+let age = Number(prompt("What is your age"))
 
 function checkDriverAge(age){
     if (age < 18){
-    alert("Sorry, you are too yound to drive this car. Powering offe");
+    alert("Sorry, you are too yound to drive this car. Powering off");
     } else if (age > 18) {
     alert("Powering On. Enjoy the ride!");
     } else if (age === 18){
@@ -33,3 +32,38 @@ function check_basket(item){
       return false;
     }
   }
+
+  // exercise 3
+
+var stock = {
+    "banana": 6,
+    "apple": 0,
+    "pear": 12,
+    "orange": 32,
+    "blueberry":1
+}
+
+var prices = {
+    "banana": 4,
+    "apple": 2,
+    "pear": 1,
+    "orange": 1.5,
+    "blueberry":10
+}
+
+let shopping_list = ["banana","pear","orange"]
+
+function myBill(){
+  let total = 0;
+  for(let item of shopping_list){
+    if(item in prices){
+      total = total + prices[item];
+    }
+  }
+  return total;
+}
+
+// Depending on the list of items that you have in your shopping list and the prices listed in the 2nd object, return the total of the expense for your groceries.
+// Call the function myBill
+// Bonus: In the function above, only add the price if the item is in stock.
+// If the item is in stock, decrease the item’s stock by 1

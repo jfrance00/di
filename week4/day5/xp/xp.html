@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="xp.css">
+    <script src="xp.js" charset="utf-8"></script>
+    <style>
+      button {
+        width:70px;
+        height:70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input id="user_number" type="text" class="input" name="input" placeholder="0">
+      <div id="calculator_keys">
+        <button class="number" id="1" type="button" name="button" onclick="javascript:my_f('1');">1</button>
+        <button class="number" id="2"type="button" name="button" onclick="javascript:my_f('2');">2</button>
+        <button class="number" id="3"type="button" name="button" onclick="javascript:my_f('3');">3</button>
+        <button class="number" id="4" type="button" name="button" onclick="javascript:my_f('4');">4</button>
+        <br>
+        <button  class="number"id="5" type="button" name="button" onclick="javascript:my_f('5');">5</button>
+        <button class="number" id="6" type="button" name="button" onclick="javascript:my_f('6');">6</button>
+        <button class="number" id="7" type="button" name="button" onclick="javascript:my_f('7');">7</button>
+        <button class="number" id="8" type="button" name="button" onclick="javascript:my_f('8');">8</button>
+        <br>
+        <button class="number" id="9" type="button" name="button" onclick="javascript:my_f('9');">9</button>
+        <button class="number" id="0" type="button" name="button" onclick="javascript:my_f('0');">0</button>
+        <button class="number" id="." type="button" name="button" onclick="javascript:my_f('.');">.</button>
+        <button class="operator" type="button" name="button" onclick="javascript:my_f('+');">+</button>
+        <br>
+        <button class="operator" type="button" name="button" onclick="javascript:my_f('-');">-</button>
+        <button class="operator" type="button" name="button" onclick="javascript:my_f('x');">x</button>
+        <button class="operator" type="button" name="button" onclick="javascript:my_f('/');">/</button>
+        <button class="operator" type="button" name="button" onclick="javascript:my_f('=');">=</button>
+        <br>
+        <button type="button" name="button" onclick="javascript:clear();">clear</button>
+        <button type="button" name="button" onclick="javascript:reset();">reset</button>
+      </div>
+    </div>
+  </body>
+</html>
