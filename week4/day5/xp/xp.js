@@ -3,21 +3,14 @@ let numbers = ['0','1','2','3','4','5','6','7','8','9','.'] //should be able to 
 let num = [];
 
 function my_f(input){
-  let calc = document.getElementsByClassName("number")
-  let operator = document.getElementsByClassName("operator")
-  if (numbers.includes(input)){
-    console.log(input + " number in loop");
-    num.push(input);
-    return num;
-  } else if (operators.includes(input)){
-    console.log("operator");
-    num.push(input);
-    return num;
-  } else if (input == "="){
+   if (input == "="){
     calculate();
+    } else {
+    display();
+    num.push(input);
+    return num;
   }
 }
-
 
 function calculate(){
   solution = eval(num.join(""));
@@ -35,4 +28,10 @@ function clear(){   //removes last number
   num.pop();
   console.log(num);
   return num;
+}
+
+function display(){
+  let display = getElementById("user_number");
+  displayNum = num.join("");
+  display.value = displayNum;
 }
