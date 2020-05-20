@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="input" name="userInput" placeholder="input characters here!">
+
+  <script type="text/javascript">
+    let display  = document.getElementById("display");     //globals
+    let input = document.getElementById("input");
+    let user_string
+
+    input.onkeyup = function(event){                 //main function triggered by event
+      key = event.keyCode;
+      console.log(event);
+      if (key < 65 || key > 90){
+        input.value = input.value.replace(event.key, "");
+    }
+  }
+
+
+
+
+  </script>
+
+  </body>
+</html>
