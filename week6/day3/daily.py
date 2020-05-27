@@ -32,7 +32,10 @@ def set_candles(age):
     if(len(cake_topper) < 10):                 #if "candles" is odd this evens it
         cake_topper = cake_topper + "_"
     bake_cake(cake_topper)
+    if(age % 4 == 0):                           #will only work this year
+        bake_cake(cake_topper)
     return cake_topper
+
 def bake_cake(top):
    print(top)
    print(cake1)
@@ -41,6 +44,5 @@ def bake_cake(top):
    print(cake4)
    print(cake5)
    print(cake6)
-
 
 user_birthday()

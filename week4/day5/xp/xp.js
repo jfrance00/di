@@ -6,7 +6,7 @@ function my_f(input){
    if (input == "="){
     calculate();
     } else {
-    display();
+    // display(num);
     num.push(input);
     return num;
   }
@@ -15,6 +15,7 @@ function my_f(input){
 function calculate(){
   solution = eval(num.join(""));
   console.log(solution);
+  display(solution);
   reset();
 }
 
@@ -30,8 +31,8 @@ function clear(){   //removes last number
   return num;
 }
 
-function display(){
-  let display = getElementById("user_number");
-  displayNum = num.join("");
-  display.value = displayNum;
-}
+// function display(toShow){
+//   let display = getElementById("user_number");
+//   displayNum = num.join("");
+//   display.value = displayNum;
+// }
