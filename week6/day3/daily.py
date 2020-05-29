@@ -32,7 +32,7 @@ def set_candles(age):
     if(len(cake_topper) < 10):                 #if "candles" is odd this evens it
         cake_topper = cake_topper + "_"
     bake_cake(cake_topper)
-    if(age % 4 == 0):                           #will only work this year
+    if(age % 4 == 0):                           #checks for leap year, will only work this year
         bake_cake(cake_topper)
     return cake_topper
 
