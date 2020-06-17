@@ -32,7 +32,8 @@ class Text:
 
     @classmethod
     def text_file(cls):
-        pass
+        new_file = open("text_stat.txt", 'a')
+        return new_file
 
 
 
@@ -67,3 +68,4 @@ my_text = TextModification(example)
 # print(my_text.most_common_word())
 print(my_text.no_special_chars())
 # print(my_text.no_stop_words())
+Text.text_file()
