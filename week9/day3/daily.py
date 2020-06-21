@@ -1,25 +1,28 @@
-example = "I am an example text! Use me to test all of your methods on text to see if you know what you are doing and can manipulate the text"
 
 class Text:
     def __init__(self, string):
         self.string = string
         self.string_as_list = string.split(" ")
 
+
     def word_frequency(self, word):
         counter = 0
         for item in self.string_as_list:
-            if item == word:
+            if item.lower() == word.lower():
                 counter += 1
         return counter
 
-
     def most_common_word(self):
         counter = dict()
-        occurances = 0
-        for word in self.string_as_list:
-            counter[word] = counter.get(word, 0) + 1
-            if counter[word] > occurances:
+        occurences = 0
+        for i, word in enumerate(self.string_as_list):
+            if word not in counter:
+                counter[word] = counter.get(word, 1)
+            else:
+                counter[word] += 1
+            if counter[word] > occurences:
                 most_common_word = word
+                occurences = counter[word]
         return most_common_word
 
 
@@ -53,7 +56,8 @@ class TextModification(Text):
         for word in self.string_as_list:
             if word not in stop_words_list:
                 relevant_word_list.append(word)
-        return relevant_word_list
+        text_as_string = ' '.join(relevant_word_list)
+        return text_as_string
 
     def no_special_chars(self):
         special_char = ['.', ',', '!', '?', '@', '#', '$','%','^','&','*','(',')','-','+','_','=',':',';',"'",'"','/']
@@ -63,9 +67,10 @@ class TextModification(Text):
                 new_string = new_string + char
         return new_string
 
-my_text = TextModification(example)
 
-# print(my_text.most_common_word())
-print(my_text.no_special_chars())
-# print(my_text.no_stop_words())
-Text.text_file()
+my_text = TextModification(open('the_stranger.txt', 'r').read())
+refine_text = my_text.no_stop_words()
+my_refined_text = TextModification(refine_text)
+print(my_refined_text.most_common_word())
+
+
