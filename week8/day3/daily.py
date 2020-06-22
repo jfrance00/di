@@ -25,14 +25,16 @@ class Chromosome:
     def __init__(self):
         self.chromosome = [Gene() for i in range(10)]
 
-    def gene_to_mutate(self):
-        pass
 
     def __str__(self):
         return f"{self.chromosome}"
 
     def __repr__(self):
-            return f'{self.chromosome}'
+        return f'{self.chromosome}'
+
+    def chose_gene_to_mutate(self):
+        gene = self.chromosome[random.randint(0, 9)]
+        gene.mutate()
 
 
 class DNA:
@@ -40,8 +42,9 @@ class DNA:
     def __init__(self):
         self.dna = [Chromosome() for i in range(10)]
 
-    def chromosome_to_mutate(self):
-        pass
+    def choose_chromosome_to_mutate(self):
+        chromosome = self.dna[random.randint(0, 9)]
+        chromosome.chose_gene_to_mutate()
 
 
 class Organism:
@@ -50,13 +53,19 @@ class Organism:
         self.dna = dna
         self.mutate_probability = mutate_probability
 
-    def mutate(self):
+    def mutate_dna(self):
+        for gene in range(self.mutate_probability):
+            dna.choose_chromosome_to_mutate()
+
+    def check_if_mutated(self):
+        pass
 
 
-my_chromosome = Chromosome()
-organism = DNA()
+dna = DNA()
+organism = Organism(dna.dna, 10)
 print(organism.dna)
-
+organism.mutate_dna()
+print(organism.dna)
 
 
 
