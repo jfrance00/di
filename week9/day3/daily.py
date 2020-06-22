@@ -54,10 +54,10 @@ class TextModification(Text):
         stop_words = open("stop_words.txt", 'r').read()
         stop_words_list = stop_words.split('\n')
         for word in self.string_as_list:
-            if word not in stop_words_list:
+            if word.lower() not in stop_words_list:
                 relevant_word_list.append(word)
-        text_as_string = ' '.join(relevant_word_list)
-        return text_as_string
+        relevent_word_str = " ".join(relevant_word_list)
+        return relevent_word_str
 
     def no_special_chars(self):
         special_char = ['.', ',', '!', '?', '@', '#', '$','%','^','&','*','(',')','-','+','_','=',':',';',"'",'"','/']
