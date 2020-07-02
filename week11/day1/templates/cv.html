@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+    {% block body %}
+
+<body>
+    <div class="header">s
+        <img src="./templates/pic.jpg">
+        <h1> {{ name }} </h1>
+    </div>
+    <div class="details">
+        <h3>Hobbies:</h3>
+        <ul>
+            <li>Climbing</li>
+            <li>Tricking</li>
+            <li>Eating hummus</li>
+        </ul>
+        <br>
+        <h3>Skills:</h3>
+        <ul>
+            <li>WebINT/OSINT</li>
+            <li>Python</li>
+            <li>Web development</li>
+        </ul>
+        <br>
+        <h3>Strengths:</h3>
+        <ul>
+            <li>Lifts heavy things</li>
+            <li>Climbs tall thinks</li>
+        </ul>
+        <br>
+        <h3>Weaknesses:</h3>
+        <ul>
+            <li>Spelling</li>
+            <li>Being a space cadet</li>
+        </ul>
+    </div>
+</body>
+{% endblock %}}
+</html>

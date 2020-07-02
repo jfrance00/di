@@ -1,0 +1,16 @@
+body {
+    margin : 10px;
+    background-color: antiquewhite;
+}
+
+.header {
+    margin : 3%;
+    display: flex;
+    justify-content : center;
+    border-bottom: aquamarine 2px;
+}
+
+img {
+    height : 100px;
+    width : 80px;
+}
