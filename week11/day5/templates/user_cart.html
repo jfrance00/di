@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+<h1> User Cart </h1>
+
+
+    <div class="card" style="width: 60rem;">
+      <div class="card-header">
+        Items in cart:
+      </div>
+      <ul class="list-group list-group-flush">
+          {% for item in cart %}
+          <li class="list-group-item">item: {{ item['Name'] }} Price: &euro;{{ item['Price']}} <form action="/removeItem/{{ item['ProductId'] }}" method="GET"> <button type="submit" class="btn btn-warning">Remove</button> </form></li>
+          {% endfor %}
+          <li class="list-group-item">Total: &euro;{{total}} </li>
+      </ul>
+    </div>
+
+{% endblock %}

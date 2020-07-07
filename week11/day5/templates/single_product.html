@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+<h1> Item Id: {{ item['ProductId'] }}:  </h1>
+<div class="card">
+  <div class="card-header">
+      {{  item["Name"]  }}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> Description: {{ item["Description"] }}</h5>
+
+      <div class="card" style="width: 65rem;">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"> Category: {{ item["Category"] }}</li>
+              <li class="list-group-item"> Size (width, depth, height): {{ item['Width'] }}, {{ item['Depth'] }}, {{ item['Height'] }} cm </li>
+              <li class="list-group-item"> Price: &euro;{{ item["Price"] }}</li>
+          </ul>
+      </div>
+      <br>
+      <form action="/addItem/{{ item['ProductId'] }}" method="GET" ><button type="submit" class="btn btn-primary">Add to Cart</button> </form>
+
+  </div>
+</div>
+
+{% endblock %}

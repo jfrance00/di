@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <h1>Products</h1>
+    {% for item in data %}
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title"> {{ item['ProductId'] }}</h5>
+        <p class="card-text">Price: &euro;{{ item['Price'] }} </p>
+        <a href="http://127.0.0.1:5000/{{item['ProductId']}}"> see item details </a><br>
+        <a href="#" class="btn btn-primary">Add to Cart</a>
+    </div>
+</div>
+    {% endfor %}}
+</div>
+{% endblock %}
