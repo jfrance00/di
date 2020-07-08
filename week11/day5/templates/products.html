@@ -9,7 +9,7 @@
         <h5 class="card-title"> {{ item['ProductId'] }}</h5>
         <p class="card-text">Price: &euro;{{ item['Price'] }} </p>
         <a href="http://127.0.0.1:5000/{{item['ProductId']}}"> see item details </a><br>
-        <a href="#" class="btn btn-primary">Add to Cart</a>
+      <form action="/addItem/{{ item['ProductId'] }}" method="GET" ><button type="submit" class="btn btn-primary">Add to Cart</button> </form>
     </div>
 </div>
     {% endfor %}}

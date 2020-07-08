@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import json
 
 app = Flask(__name__)
@@ -50,7 +50,7 @@ def add_item(ProductId):
     user_cart.append(item)
     total += item['Price']
     print(user_cart)
-    return all_products()
+    return redirect(url_for('all_products'))
 
 
 @app.route('/removeItem/<ProductId>')
@@ -60,7 +60,7 @@ def remove_item(ProductId):
     user_cart.remove(item)
     total -= item['Price']
     print(user_cart)
-    return all_products()
+    return redirect(url_for('customer_cart'))
 
 
 if __name__ == "__main__":
