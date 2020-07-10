@@ -16,8 +16,9 @@ def home():
 
 @app.route('/main/<city>', methods=['GET', 'POST'])
 def main(city):
-    store_info = json.loads('inventory.json')
-    return flask.render_template('main.html')
+    with open(inventory, 'rb') as f:
+        data = json.load(f)
+        return flask.render_template('main.html', data=data, city=city)
 
 
 @app.route('/cart', methods=['GET', 'POST'])
