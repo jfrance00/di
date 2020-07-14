@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form method="POST">
+
+    {{ form.name.label}}
+    {{ form.name() }}
+
+    {{ form.phone.label }}
+    {{ form.phone() }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    {{ form.address.label }}
+    {{ form.address() }}
+
+    {{ form.submit() }}
+
+</form>
+
+{% endblock %}

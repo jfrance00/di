@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+
+<h4>Search for a person by their name or phone number</h4>
+<br>
+
+<form method="POST">
+{{ form.name.label }}
+{{ form.name() }}
+<br>
+<br>
+{{ form.number.label }}
+{{ form.number() }}
+<br>
+<br>
+{{ form.submit() }}
+</form>
+
+{% endblock %}
