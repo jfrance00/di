@@ -4,22 +4,25 @@
 
 
 {% block body %}
-
-{{ data }}
+<div class="container">
 
 {% for item in data['products'] %}
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"> {{ item['name'] }}</h5>
-    <p class="card-text"> {{ item['brand'] }}</p>
-    <p class="card-text"> &dollar;{{ item['price'] }}</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
+<div class="card-container">
+  <div class="card" style="width: 16rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> {{ item['name'] }}</h5>
+      <p class="card-text"> {{ item['brand'] }}</p>
+      <p class="card-text"> &dollar;{{ item['price'] }}</p>
+      <a href={{ url_for("add_item_details", city=city, item_id=item['id']) }} class="btn btn-primary">Add to Cart</a>
+    </div>
   </div>
 </div>
 
+
 {% endfor %}
 
+</div>
 {% endblock %}
 

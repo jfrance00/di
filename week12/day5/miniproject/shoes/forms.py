@@ -1,6 +1,11 @@
 import flask
 import flask_wtf
 import wtforms as wtf
+import json
+from . import inventory
+
+with open(inventory, 'rb') as f:
+    data = json.load(f)
 
 
 class Location(flask_wtf.FlaskForm):
@@ -9,4 +14,8 @@ class Location(flask_wtf.FlaskForm):
 
 
 class CustomerItem(flask_wtf.FlaskForm):
-    pass
+    size = wtf.SelectField('Size', choices=['5', '6', '7'])
+    color = wtf.SelectField('color', choices=['blue', 'red', 'black'])
+    submit = wtf.SubmitField('Add to Cart')
+
+

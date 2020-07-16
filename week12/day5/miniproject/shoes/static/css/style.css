@@ -1,4 +1,15 @@
 body {
+    left-margin: 10px;
+    right-margin: 10px;
+    background-color: lightgrey;
+}
+
+.container {
     margin: 10px;
-    background-color: aqua;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
 }
