@@ -49,7 +49,7 @@ def check_win(player):
     winning_combos = [['7','8','9'], ['4','5','6'], ['1','2','3'], ['1','4','7'], ['2','5','8'], ['3','6','9'], ['1','5','9'], ['2','5','7']]
     for spaces in winning_combos:
         if (all(elem in player for elem in spaces)):
-            return Trues
+            return True
 
 def play():
     display_board(the_board)

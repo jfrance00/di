@@ -6,13 +6,13 @@ from . import app, db
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    form = forms.SearchInput()
+    form = forms.SearchNameOrNumber()
     return flask.render_template('index.html', form=form)
 
 
 @app.route('/add-input', methods=['GET', 'POST'])
 def add_input():
-    form = forms.AddToDatabase()
+    form = forms.AddPersonToDatabase()
     if flask.request.method == "POST":
         id = form.id.data
         name = form.name.data

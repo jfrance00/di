@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+{{ data }}
+
+<h3>Please enter your name to begin</h3>
+<form method="POST">
+    {{ form.fname.label}}
+    {{ form.fname() }}
+
+    {{ form.lname.label}}
+    {{ form.lname() }}
+
+    {{ form.submit() }}
+
+</form>
+
+</body>
+</html>

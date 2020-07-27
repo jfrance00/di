@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <form method="POST" action="" class="form-inline">
+        <div class="form-group mb-2">
+            {{ form.name.label }}:
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group mb-2 mx-sm-3 mb-2">
+            {{ form.age.label }}:
+            {{ form.age(class="form-control") }}
+        </div>
+        {{ form.submit(class="btn btn-primary mb-2") }}
+    </form>
+    <a href="{{ url_for('see_users') }}" class="btn btn-primary">See all users</a>
+    <a href="{{ url_for('msg_to_user') }}" class="btn btn-primary">Send a message</a>
+{% endblock %}

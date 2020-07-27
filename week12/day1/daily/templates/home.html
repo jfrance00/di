@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+home
+{% endblock%}
+
+{% block body %}
+<h1>Enter your details to create your resume:</h1>
+<form method="POST">
+    {{ form.full_name.label }}
+    {{ form.full_name(size=32) }}
+    <br>
+    {{ form.email.label }}
+    {{ form.email(size=32) }}
+    <br>
+    {{ form.phone.label }}
+    {{ form.phone(size=32) }}
+    <br>
+    {{ form.address.label }}
+    {{ form.address(size=32) }}
+    <br>
+    {{ form.last_job.label }}
+    {{ form.last_job(size=32) }}
+    <br>
+    {{ form.past_job.label }}
+    {{ form.past_job() }}
+    <br>
+    {{ form.skills.label}}
+    {{ form.skills() }}
+    <br>
+    {{ form.submit(class="btn btn-primary") }}
+</form>
+
+<!--<input type="submit" value="Submit">-->
+{% endblock%}
